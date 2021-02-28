@@ -1,0 +1,23 @@
+const recordsY = obj.
+      pipe((map((value, index) => {
+        value["New"] = value.key + index;
+        console.log("map", value)
+        return value;
+      })), filter((v) => { console.log("filter", v); return v["key"] == "Ban" || v["key"] == "che" }));
+    recordsY.subscribe((x: any) => {
+      if (x.key == "che") {
+        console.log("subcribed", x);
+        //break;
+      }
+    });
+
+
+    =================
+
+        // const recordsY = obj.
+    //   pipe(map(x => { 
+    //     x["New"] = "New";
+    //     x["NewK"] = "Base"
+    //     return x;
+    //   }));
+    // recordsY.subscribe((x: any) => console.log(x));

@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DynamicComp'`, () => {
+  it(`should have as title 'AngularApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DynamicComp');
+    expect(app.title).toEqual('AngularApp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('DynamicComp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('AngularApp app is running!');
   });
 });

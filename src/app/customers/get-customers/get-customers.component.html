@@ -1,0 +1,41 @@
+<table class="table table-bordered">
+    <thead>
+        <th>Update</th>
+        <th>Delete</th>
+        <th>ContactTitle</th>
+        <th>CustomerID</th>
+        <th>CompanyName</th>
+        <th>ContactName</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Country</th>
+        <th>Phone</th>
+        <th>Fax</th>
+        <th>PostalCode</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of CustomersList ; let $index=index">
+            <td>
+                <button style="padding:1px" type="button" class="btn btn-primary btn-xs"
+                    (click)="evtUpdate(record,'Update')">
+                    <i class="fas fa-edit"></i></button> &nbsp;</td>
+            <td>
+                <!-- <input type="checkbox" class='check-input'> &nbsp; -->
+                <button style="padding:1px" type="button" class="btn btn-danger"
+                    (click)="evtdelete(record.CustomerID,$index)">
+                    <i class="fas fa-trash"></i></button></td>
+            <td>{{record.ContactTitle}}</td>
+            <td>{{record.CustomerID}}</td>
+            <td>{{record.CompanyName}}</td>
+            <td>{{record.ContactName}}</td>
+            <td>{{record.Address}}</td>
+            <td>{{record.City}}</td>
+            <td>{{record.Region}}</td>
+            <td>{{record.Country}}</td>
+            <td>{{record.Phone}}</td>
+            <td>{{record.Fax}}</td>
+            <td>{{record.PostalCode}}</td>
+        </tr>
+    </tbody>
+</table>
